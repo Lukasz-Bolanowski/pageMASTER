@@ -7,7 +7,6 @@
 html {
     font-size: 10px;
     font-family: 'Roboto', sans-serif;
-    font-weight: 350;
     scroll-behavior: smooth;
 }
 
@@ -146,6 +145,12 @@ aside {
     color: #9e47e5;
 }
 
+@media (min-width: 667px) and (orientation: landscape) {
+    aside {
+        flex-direction: row;
+    }
+}
+
 @media (min-width: 1024px) {
     aside, .hamburger {
         display: none;
@@ -162,14 +167,6 @@ aside {
     .menu__item a {
         font-size: clamp(1.4rem, 1.7vw, 2.2rem);
     }
-}
-
-.intro, .ai-zone, .printing-zone, .gallery, .about-us, .contact {
-    padding: 15px;
-}
-
-.about-us {
-    padding-bottom: 30px;
 }
 
 .hero {
@@ -194,6 +191,12 @@ aside {
     width: 80%;
 }
 
+@media (min-width: 667px) and (orientation: landscape) {
+    .header-logo {
+        width: 50%;
+    }
+}
+
 @media (min-width: 1024px) {
     .header-image {
         clip-path: polygon(0 50%, 50% 70%, 100% 50%, 100% 100%, 0 100%);
@@ -201,7 +204,7 @@ aside {
 
     .header-logo {
         transform: translate(-50%, -60%);
-        width: 40%;
+        width: 30%;
     }
 }
 
@@ -215,7 +218,6 @@ aside {
     font-size: clamp(3rem, 6vw, 4.5rem);
     text-align: center;
     text-transform: uppercase;
-    padding-bottom: 15px;
     background-image: linear-gradient(to right, #4154f5, #9e47e5);
     background-clip: text;
     -webkit-background-clip: text;
@@ -238,12 +240,23 @@ aside {
     color: #9e47e5
 }
 
+.intro, .ai-zone, .printing-zone, .gallery, .about-us, .contact {
+    padding: 15px;
+}
+
+.about-us {
+    padding-bottom: 30px;
+}
+
 .ai-zone, .printing-zone {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     position: relative;
+}
+
+.ai-zone, .printing-zone, .about-us, footer {
     background-color: #bfc3e3;
 }
 
@@ -251,13 +264,6 @@ aside {
     display: flex;
     flex-direction: column;
     text-align: center;
-}
-
-.specjalizations {
-    font-size: clamp(2.7rem, 5vw, 4rem);
-    text-align: center;
-    margin-top: 15px;
-    color: #4154f5;
 }
 
 .boxes_item {
@@ -295,34 +301,14 @@ aside {
         width: 30%;
     }
 
-    .image {
-        min-height: 80vh;
-    }
-
     .description {
         width: 60%;
         margin: 0 auto;
     }
-
-    .image {
-        background-size: 600px;
-    }
-
-    .header-image {
-        min-height: 80vh;
-    }
 }
-
-/*Galeria CSS grid*/
 
 .gallery {
     padding: 15px;
-}
-
-.gallery-title {
-    font-size: clamp(2.7rem, 5vw, 4rem);
-    text-align: center;
-    color: #4154f5;
 }
 
 .images {
@@ -428,10 +414,6 @@ aside {
     .photo:hover .overlay-text {
         color: #fff;
     }
-}
-
-.about-us {
-    background-color: #bfc3e3;
 }
 
 .aboutus-main {
@@ -632,7 +614,6 @@ textarea {
 }
 
 footer {
-    background-color: #bfc3e3;
     text-align: center;
     padding: 15px;
 }
@@ -643,6 +624,10 @@ footer {
 
 .page-info {
     margin-top: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .logo-footer {
@@ -651,13 +636,12 @@ footer {
 }
 
 .copyright {
-    font-size: clamp(1rem, 0.9vw, 1.4rem);
+    font-size: clamp(1.3rem, 1.2vw, 1.6rem);
     margin: 0 10px;
 }
 
 @media (min-width: 1024px) {
     .page-info {
-        display: flex;
-        justify-content: center;
+        flex-direction: row;
     }
 }
